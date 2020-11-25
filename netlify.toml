@@ -1,19 +1,5 @@
 [build]
   functions = "./functions"
 
-[build.environment]
-  # Change this path with the path to your repository
-  GO_IMPORT_PATH = "https://github.com/FranToBa/Autoevaluacion-IV"
-
-[[redirects]]
-  from = "/hola"
-  to = "/.netlify/functions/hola"
-  status = 200
-
-[[redirects]]
-  from = "/hello"
-  to = "/.netlify/functions/hello"
-  status = 200
-
 
 

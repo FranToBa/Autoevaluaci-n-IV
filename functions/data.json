@@ -1,0 +1,44 @@
+{
+  "entrantes":[
+    {
+      "nombre":"Sopa",
+      "precio": 2.5
+    },
+    {
+      "nombre":"Pasta",
+      "precio":"3.0"
+    },
+    {
+      "nombre":"Ensalada",
+      "precio":"2.0"
+    }
+  ],
+  "principales":[
+    {
+      "nombre":"Pescado",
+      "precio":"4.5"
+    },
+    {
+      "nombre":"Carne",
+      "precio":"5.0"
+    },
+    {
+      "nombre":"Arroz",
+      "precio":"4.0"
+    }
+  ],
+  "postres":[
+    {
+      "nombre":"Tarta",
+      "precio":"1.5"
+    },
+    {
+      "nombre":"Brownie",
+      "precio":"2.0"
+    },
+    {
+      "nombre":"Fruta",
+      "precio":"1.0"
+    }
+  ]
+}
