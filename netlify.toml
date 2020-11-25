@@ -1,0 +1,10 @@
+[build]
+  functions = "./functions"
+
+
+[[redirects]]
+  from = "/menus"
+  to = "/.netlify/functions/menus"
+  status = 200
+
+
