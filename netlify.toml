@@ -1,11 +1,10 @@
 [build]
-  publish = "."
   functions = "./functions"
 
 
 [[redirects]]
-  from = "/menus"
-  to = "/.netlify/functions/menus"
+  from = "/hola"
+  to = "/.netlify/functions/hola"
   status = 200
 
 
