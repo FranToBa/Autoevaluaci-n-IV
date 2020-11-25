@@ -40,12 +40,13 @@ module.exports = async (req,res) =>{
             result="Las consultas disponibles son:\n/cfEntrantes\n/cfPrincipales\n/cfPostres\n"
         }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({text:result, method:'sendMessage', chat_id:chat.id}),
-    headers:{
-        'Content-Type': 'application/json; charset=utf-8'
-    }
+	return {
+	    statusCode: 200,
+	    body: JSON.stringify({text:result, method:'sendMessage', chat_id:chat.id}),
+	    headers:{
+		'Content-Type': 'application/json; charset=utf-8'
+	    }
+}
     }
     else{
         res.status(200).send("Iniciando la consulta de platos")
