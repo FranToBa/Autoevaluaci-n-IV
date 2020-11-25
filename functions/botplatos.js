@@ -1,23 +1,14 @@
-//const Menu  = require("../src/menu");
 
 function getPlatos(tipoPlato){
-   //Creamos un menu y devolvemos los platos del tipo indicado
-/*    var menu = new Menu()
-    if(tipoPlato == "entrantes")
-	platos= menu.mostrarEntrantes()
-    else if (tipoPlato == "principales")
-	platos= menu.mostrarEntrantes()
-    else if (tipoPlato == "postres")
-	platos= menu.mostrarEntrantes()
 
-    return platos*/
-
-     if(tipoPlato == "entrantes")
-	result = "Entrantes bonitos"
-    else if (tipoPlato == "principales")
-	result = "Principales bonitos"
-    else if (tipoPlato == "postres")
-	result = "postres bonitos"
+    var result = ""
+    if(tipoPlato == "entrantes"){
+	result = "Entrantes bonitos";  
+    }else if (tipoPlato == "principales"){
+	result = "Principales bonitos";
+    }else if (tipoPlato == "postres"){
+	result = "postres bonitos";
+    }
     return result
 }
 
@@ -34,11 +25,11 @@ module.exports = async (req,res) =>{
             
         }
         else if(text == "/cfPrincipales"){
-            result = "Los platos principales son:\n"
+            result = "Los platos principales son:\n";
             result+=getPlatos("principales")
         }
         else if(text == "/cfPostres"){
-            result="Los postres son \n"
+            result="Los postres son \n";
             result+=getPlatos("postres")
         }
 
