@@ -7,4 +7,10 @@
   to = "/.netlify/functions/hola"
   status = 200
 
+[[redirects]]
+  from = "/hello"
+  to = "/.netlify/functions/hello"
+  status = 200
+
+
 
