@@ -13,7 +13,7 @@ function getPlatos(tipoPlato){
 }
 
 
-module.exports = async (req,res) =>{
+exports.handler = async (req,res) =>{
     if(req.body != undefined){
         var IDchat = req.body.message.chat.id
         var text = req.body.message.text
