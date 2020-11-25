@@ -13,7 +13,7 @@ function getPlatos(tipoPlato){
 }
 
 
-exports.handler = async (req,res) =>{
+/*exports.handler = async (req,res) =>{
     if(req.body != undefined){
         var IDchat = req.body.message.chat.id
         var text = req.body.message.text
@@ -52,4 +52,41 @@ exports.handler = async (req,res) =>{
         res.status(200).send("Iniciando la consulta de platos")
     }
     
+}*/
+
+exports.handler = async function(event, context) {
+    try{
+        let body = JSON.parse(event.body);
+        let {chat, text} = body.message;
+      
+        if (text && text.charAt(0) == '/'){ //Contiene texto el mensaje, será el comando
+            let result = '';
+            switch (text) {
+                case "/entrante":
+                  result = getPlatos('entrantes');
+                  break;
+                case "/principal":
+                  result = lib.getAsignaturas('principales');
+                  break;
+                case "/postre":
+                  result = lib.getAsignaturas("postres");
+                  break;
+                default:
+                  result = "Comandos a usar"
+                  break;
+            }       
+            return {
+              statusCode: 200,
+              body: JSON.stringify({text:result, method:'sendMessage', chat_id:chat.id}),
+              headers:{
+                  'Content-Type': 'application/json; charset=utf-8'
+              }
+          };
+        }
+    }
+    catch(error){
+    }
+
+
 }
+
