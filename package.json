@@ -14,7 +14,13 @@
     "supertest": "^6.0.1"
   },
   "dependencies": {
+    "@hapi/hapi": "^20.0.3",
     "express": "^4.17.1",
-    "jest": "^26.6.3"
+    "hapi": "^18.1.0",
+    "jest": "^26.6.3",
+    "koa": "^2.13.0",
+    "koa-router": "^10.0.0",
+    "morgan": "^1.10.0",
+    "node-etcd": "^7.0.0"
   }
 }
